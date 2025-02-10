@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Expense Reimbursement</title>
+    <style>
+        canvas { 
+            border: 1px solid black; 
+            width: 100%; 
+            max-width: 400px;
+            height: 150px; 
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <h2>Travel Expense Reimbursement Form</h2>
     <form id="expense-form">
         <label>Employee Name:</label>
         <input type="text" id="employee-name" required>
-        
+
         <label>Employee ID:</label>
         <input type="text" id="employee-id" required>
 
@@ -23,6 +32,10 @@
         <label>Upload Receipts:</label>
         <input type="file" id="receipts" multiple accept="image/*">
 
+        <h3>Signature</h3>
+        <canvas id="signature-pad"></canvas>
+        <button type="button" onclick="clearSignature()">Clear Signature</button>
+
         <button type="submit">Generate PDF</button>
     </form>
 
@@ -30,6 +43,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/4.0.3/signature_pad.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
