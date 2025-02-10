@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Reimbursement</title>
+</head>
+<body>
+    <h2>Travel Expense Reimbursement Form</h2>
+    <form id="expense-form">
+        <label>Employee Name:</label>
+        <input type="text" id="employee-name" required>
+        
+        <label>Employee ID:</label>
+        <input type="text" id="employee-id" required>
+
+        <label>Date of Trip:</label>
+        <input type="date" id="trip-date" required>
+
+        <label>Location:</label>
+        <input type="text" id="trip-location" required>
+
+        <label>Upload Receipts:</label>
+        <input type="file" id="receipts" multiple accept="image/*">
+
+        <button type="submit">Generate PDF</button>
+    </form>
+
+    <a id="download-link" style="display: none;">Download Filled Form</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
